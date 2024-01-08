@@ -1,0 +1,6 @@
+# Einfacher Passwortschutz mit .htaccess
+AuthType Basic
+AuthName "Passwortgeschützter Bereich"
+AuthUserFile /mnt/rid/38/69/52253869/htdocs/allerlei/.htpasswd
+
+require user Nida

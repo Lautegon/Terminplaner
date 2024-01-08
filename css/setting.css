@@ -1,0 +1,55 @@
+html, body		{
+				padding: 0 8px 8px 8px;
+				}
+				
+label			{
+				min-width: 70px;
+				}
+				
+.u_settings		{
+				background-color: rgba(218,209,163,0.3);
+				margin:	10px 4px 0 4px;
+				padding: 8px;
+				}
+
+input[type="checkbox"]	{
+				margin:	0 15px 0 8px;
+				}
+				
+.input_block	{
+				padding: 5px;
+				margin-bottom: 15px;
+				}
+				
+hr				{
+				color: black;
+				border-top: 2px solid black;
+				}
+				
+.b_input_block	{
+				padding: 5px;
+				margin-bottom: 15px;
+				}
+
+.b_input_block label	{
+				display: block;
+				}
+			
+.linie			{
+				display: inline-block;
+				}
+				
+.linie label	{
+				display: block;
+				}
+				
+.link			{
+				float: right;
+				border: 1px solid grey;
+				background-color: silver;
+				border-radius: 4px;
+				margin: 20px;
+				padding: 3px;
+				text-align: center;
+				width: 90px;
+				}

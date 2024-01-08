@@ -1,0 +1,996 @@
+html, body	{
+			background-color: rgba(218,209,163,0.4);
+			padding:0 8px 8px 8px;
+			}
+hr			{
+			margin-top: 18px;
+			margin-bottom: 18px;
+			border: none;
+			background-color: rgba(255,255,255,0.7);
+			height: 3px;
+			
+			}
+			
+option.gs_datalist	{
+			font-weight: 800;
+			color: red;
+			}
+/*.step_1		{
+
+	margin: 10px !important;
+
+}*/
+.container {
+			padding-right: 0px;
+			padding-left: 0px;
+			}
+.header	{
+			display: flex;
+			background-image: url('/images/tophead.jpg');
+			padding: 3px;
+			margin-top: 18px;
+			}
+#kalender	{
+			width:296px;
+			min-width: 296px;
+			border:1px solid black;
+			font-family:verdana;
+			font-size:10px;
+			background-color: rgba(255, 255, 255, 0.6);
+			}
+#kalender_menue	{
+			display: flex;
+			}
+#datum_steuerung	{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			}
+.last		{
+			margin-left: 8px;
+			margin-right: 8px;
+			font-size: 16px;
+			
+			}
+.kalender_scroll {
+			display: block;
+			width: 55%;
+			text-align: center;
+			}
+.menue		{
+			padding: 3px 8px 0px 5px;
+			}
+.menue_inline	{
+			margin-top: 16px;
+			padding: 10px;
+			display: inherit;
+			}
+			
+/*.kalender_links{
+			width: 30%;
+			min-width: 220px;
+			}*/
+.menue_abwesend		{
+			margin: 12px;
+			padding: 10px;
+			display: flex;
+			}
+.link		{
+			border: 1px solid grey;
+			background-color: silver;
+			border-radius: 4px;
+			margin-right: 6px;
+			margin-bottom: 5px;
+			padding: 3px;
+			}
+.setting_on {
+			display: display;
+			}
+.setting_off	{
+			display: none;
+			}
+/*.kalenderblatt {
+			width: 40%;
+			}*/
+.kalender_rechts {
+			width: 30%;
+			text-align: right;
+			margin-right: 10px;
+			min-width: 240px;
+			}
+
+.kalender_2 {
+			display: flex;
+			padding-top: 5px;
+			padding: 3px;
+			}
+.kalender_2>div .row {
+			background-color: white;
+			margin: 2px;
+			}
+.kalender_2 table {
+			line-hight: 1;
+			}
+			/*Tabellen*/
+table, th, td	{
+			border-collapse: separate;
+			border-style: solid;
+			border-width: 1px;
+			border-color: rgba(0, 0, 0, 0.7);
+			border-spacing: 1px;
+			border-radius:	2px;
+			text-align: center;
+			font-size: 12px;
+			line-height: 2.5;
+			padding: 2px;
+			}
+
+			/*Tabellen für Ausgabe BDE und Abrechnungen*/
+			
+#umsatz		{
+			display: none;
+			}
+.pdf_kassenbuch	{
+			position: fixed;
+			top: 0;
+			left: 700px;
+			}
+.th_1		{
+			font-size: 20px;
+			font-weight: 400;
+			color: red;
+			padding: 2px;
+			}
+.th_bar		{
+			font-size: 20px;
+			font-weight: 400;
+			color: blue;
+			padding: 2px;
+			}
+.th_mas		{
+			font-size: 20px;
+			font-weight: 400;
+			color: green;
+			padding: 2px;
+			}
+.th_aus		{
+			font-size: 20px;
+			font-weight: 400;
+			color: orange;
+			padding: 2px;
+			}
+.th_2		{
+			font-size: 16px;
+			font-weight: 400;
+			padding: 2px;
+			}
+.fett		{
+			font-size: 18px;
+			font-weight: 600;
+			}
+table.r1 td {
+			line-height: 0.9;
+			}
+table.r1 th {
+			line-height: 1;
+			}
+table.r1 tr	{
+			height: 17px;
+			}
+table.r2 td {
+			line-height: 0.9;
+			}
+table.r2 th {
+			line-height: 1;
+			}
+table.r2 tr	{
+			height: 17px;
+			}
+table.r3 td {
+			line-height: 0.9;
+			}
+table.r3 th {
+			line-height: 1;
+			}
+table.r3 tr	{
+			height: 17px;
+			}
+table.r4 td {
+			line-height: 0.9;
+			}
+table.r4 th {
+			line-height: 1;
+			}
+table.r4 tr	{
+			height: 17px;
+			}
+table.r5 td {
+			line-height: 0.9;
+			}
+table.r5 th {
+			line-height: 1;
+			}
+table.r5 tr	{
+			height: 17px;
+			}
+table.r6 td {
+			line-height: 0.9;
+			}
+table.r6 th {
+			line-height: 1;
+			}
+table.r6 tr	{
+			height: 17px;
+			}
+table.rSt	{
+			max-width: 170px;
+			}			
+table.rSt td {
+			line-height: 0.9;
+			max-width: 155px;
+			overflow: hidden;
+			}
+table.rSt th {
+			line-height: 1;
+			}
+table.rSt tr	{
+			height: 17px;
+			}
+.rSt p	{
+			margin: 1px 0 1px 0;
+			}			
+table.schichtplan {
+			margin: 5px auto 5px auto;
+			}
+#person		{
+			position: absolute;
+			top: 0;
+			left: 5px;
+			}
+#persbutton	{
+			background-color: rgba(244, 244, 244, 1);
+			padding: 8px 8px 2px 8px;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			}
+#personal	{
+			display: none;
+			background-color: rgba(244, 244, 244, 0.6);
+			padding: 5px 5px 10px 5px;
+			width: 880px;
+			margin-left: auto;
+			margin-right: auto;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			}
+#tag		{
+			text-align: center;
+			font-size: 2.6em;
+			color: white;
+			margin-bottom: 0;
+			}
+table.barverkauf {
+			background-color: rgba(244, 244, 244, 0.5);
+			}
+table.barverkauf th {
+			line-height: 1.1em;
+			
+			}
+table.barverkauf td {
+			line-height: 1em;
+			padding: 5px;
+			}
+table.massagen	{
+			background-color: rgba(250, 250, 250, 0.7);
+			}
+table.massagen th {
+			line-height: 1.1em;
+			
+			}
+table.massagen td {
+			line-height: 1em;
+			padding: 5px;
+			}
+.trenner	{
+			height: 12px;
+			}
+table.kassenbuch	{
+			background-color: rgba(253, 253, 253, 0.7);
+			max-width: 670px;
+			}
+table.kassenbuch th {
+			line-height: 1.1em;
+			
+			}
+table.kassenbuch td {
+			line-height: 1em;
+			padding: 5px;
+			text-align: left;
+			}
+.trenner_summe	{
+			border-bottom: 2px solid green;
+			background-color: white;
+			}
+.trenner_end	{
+			
+			background-color: grey;
+			border-bottom: 2px double red;
+			
+			}
+table.dienstplan {
+			border-collapse: collapse;
+			line-height: 1;
+			font-size: 9px;
+			border-color: grey;
+			}
+table.dienstplan th {
+			line-height: 1;
+			font-size: 10px;
+			padding: 1px;
+			}
+table.dienstplan td {
+			line-height: 1;
+			font-size: 9px;
+			background-color: rgba(255, 255, 255, 0.5);
+			}
+table.personallink {
+			border-collapse: collapse;
+			margin-left: auto;
+			margin-right: auto;
+			border-color: grey;
+			}
+table.personallink th {
+			line-height: 1;
+			font-size: 11px;
+			padding: 2px;
+			border-color: grey;
+			}
+table.personallink td {
+			line-height: 1;
+			font-size: 10px;
+			border-color: grey;
+			}
+th.leer	{
+			width: 3px;
+			}
+td>input	{
+			background-color: orange;
+			width: auto;
+			margin: 0;
+			}
+table.abwesenheit {
+			/*border-collapse: collapse;*/
+			border-style: none;
+			margin-left: 40px;
+			}
+table.abwesenheit td {
+			border-style: none;
+			margin:5px;
+			}
+.frei		{
+			background-color: rgba(210, 210, 210, 0.5);
+			}
+.inner		{
+			float: right;
+			}
+.menue_head {
+			display: flex;
+			}
+.persplan {
+			background-color: rgba(244, 244, 244, 0.6);
+			padding: 6px;
+			margin: 8px auto 8px auto;
+			width: auto;
+			text-align: center;
+			/*width: 1328px;*/
+			}
+#rapporte	{
+			display: flex;
+			}
+.checkrapport{
+			margin: 12px;
+			}
+select[multiple], select[size]{
+			height: 25px;
+			}
+ /* Customize the label (the container) */
+.checkcontrol {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkcontrol input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -7px;
+  left: 3px;
+  height: 25px;
+  width: 30px;
+  background-color: #eee;
+  border-style: solid;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0.7);
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontrol:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkcontrol input:checked ~ .checkmark {
+  background: url(../images/checked.png);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) 
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+ Show the checkmark when checked
+.container input:checked ~ .checkmark:after {
+  display: block;
+}*/
+
+/* Style the checkmark/indicator 
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} */
+.head {
+		text-align: left;
+		}
+
+.gross	{
+		font-size: 3.2em;
+		color: white;
+		margin: 3px;
+		}
+.grau {	
+		color: red;
+		font-size: 18px;
+		}
+
+.headline	{
+		text-align: center;
+		}
+label 	{
+		display: block;
+		}
+input.suchen {
+		margin: 8px 90px 30px 10px;
+		}
+input.gutschein	{
+	
+}
+.input_number {
+		-moz-appearance: textfield;
+		-webkit-inner-spin-button, 
+		-webkit-outer-spin-button { 
+		-webkit-appearance: none;
+		margin: 0;
+		}
+		}		
+.inputgroup	{
+		width: 800px;
+		}
+.innerP {
+		display: flex;
+		}
+.zeile3{
+		width: 33%;
+		margin-left: 6px;
+		}
+.zeile3normal{
+		width: 100px;
+		margin-right: 35px;
+		}
+.zeile3normal>input, select{
+		width: 130%;
+		}
+.zeile3gross{
+		width: 150px;
+		margin-left: 6px;
+		}
+.zeile3gross>input{
+		width: 100%;
+		}
+.zeile3klein{
+		width: 60px;
+		}
+.zeile3klein>input{
+		width: 100%;
+		}
+.zeile3>input{
+		width: 100%;
+		}
+.innerX	{
+		width: 100%;
+		margin: 10px;
+		padding: 10px;
+		}
+.zeile1	{
+		display: flex;
+		margin-left: 6px;
+		margin-top: 18px;
+		margin-bottom: 10px;
+		}
+.i1 	{
+	
+		}
+.zeile1>input {
+		margin: -5px 3px 8px 6px;
+		width: 60px;
+		padding-top: -10px;
+		}
+.i2		{
+		margin-top: 12px;
+		width: 39%;
+		}
+		
+.termine {
+		background-color: rgb(255,255,255);
+		}
+#we		{
+		border: 2px solid red;
+		padding: 4px;
+		}
+#we label	{
+		position: relative;
+		bottom:	-15px;
+		margin-top:	-15px;
+		}
+#raum1 {
+		background-color: rgba(243,146,0,0.09);
+		min-width: 155px;
+		}
+tr.belegt p.mName	{
+		display: none;
+		}
+tr.belegt p.mInfo	{
+		display: none;
+		}
+tr.belegt p.mBes	{
+		display: none;
+		}
+tr.belegt_2 p.mBes	{
+		display: none;
+		}
+.belegtFolgend a	{
+		display: none;
+		}
+.belegtLast a	{
+		color: grey;
+		}
+#raum1>table .belegtFolgend {
+			background-color: rgba(243,146,0,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum1>table .belegtLast {
+		background-color: rgba(243,146,0,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum1>table .belegt {
+			background-color: rgba(243,146,0,0.5);
+		}
+#raum1>table .belegt_2 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_3 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_4 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_5 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_6 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_7 {
+			background-color: rgba(243,146,0,0.4);
+		}
+#raum1>table .belegt_8 {
+			background-color: rgba(243,146,0,0.4);
+		}
+
+				/* Raum 2 */
+#raum2	{
+			background-color: rgba(149,27,149,0.09);
+			min-width: 155px;
+		}
+#raum2>table .belegtFolgend {
+			background-color: rgba(149,27,149,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum2>table .belegtLast {
+		background-color: rgba(149,27,149,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum2>table .belegt {
+			background-color: rgba(149,27,149,0.5);
+		}
+#raum2>table .belegt_2 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_3 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_4 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_5 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_6 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_7 {
+			background-color: rgba(149,27,149,0.4);
+		}
+#raum2>table .belegt_8 {
+			background-color: rgba(149,27,149,0.4);
+		}	
+#raum3	{
+			background-color: rgba(0,161,154,0.09);
+			min-width: 155px;
+		}
+#raum3>table .belegtFolgend {
+			background-color: rgba(0,161,154,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum3>table .belegtLast {
+		background-color: rgba(0,161,154,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum3>table .belegt {
+			background-color: rgba(0,161,154,0.5);
+		}
+#raum3>table .belegt_2 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_3 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_4 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_5 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_6 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_7 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum3>table .belegt_8 {
+			background-color: rgba(0,161,154,0.4);
+		}
+#raum4	{
+			background-color: rgba(149,193,31,0.09);
+			min-width: 155px;
+		}
+#raum4>table .belegtFolgend {
+			background-color: rgba(149,193,31,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum4>table .belegtLast {
+		background-color: rgba(149,193,31,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum4>table .belegt {
+			background-color: rgba(149,193,31,0.5);
+		}
+#raum4>table .belegt_2 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_3 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_4 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_5 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_6 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_7 {
+			background-color: rgba(149,193,31,0.4);
+		}
+#raum4>table .belegt_8 {
+			background-color: rgba(149,193,31,0.4);
+		}		
+#raum5 	{
+			background-color: rgba(233,78,27,0.09);
+			min-width: 155px;
+		}
+#raum5>table .belegtFolgend {
+			background-color: rgba(233,78,27,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum5>table .belegtLast {
+		background-color: rgba(233,78,27,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum5>table .belegt {
+			background-color: rgba(233,78,27,0.5);
+		}
+#raum5>table .belegt_2 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_3 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_4 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_5 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_6 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_7 {
+			background-color: rgba(233,78,27,0.4);
+		}
+#raum5>table .belegt_8 {
+			background-color: rgba(233,78,27,0.4);
+		}		
+#raum6 	{
+			background-color: rgba(214,11,82,0.09);
+			min-width: 155px;
+		}
+#raum6>table .belegtFolgend {
+			background-color: rgba(214,11,82,0.4);
+			border: 0px;
+			height: 18px;
+		}
+#raum6>table .belegtLast {
+		background-color: rgba(214,11,82,0.4);
+		background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 60px);
+		height: 18px;
+		}
+#raum6>table .belegt {
+			background-color: rgba(214,11,82,0.5);
+		}
+#raum6>table .belegt_2 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_3 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_4 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_5 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_6 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_7 {
+			background-color: rgba(214,11,82,0.4);
+		}
+#raum6>table .belegt_8 {
+			background-color: rgba(214,11,82,0.4);
+		}
+.zeit	{
+			width: 17%;
+			text-align: center;
+		}
+.termin	{
+			width: 83%;
+			text-align: center;
+		}
+.termin_innen {
+		width: 100%;
+		overflow: hidden;
+		}
+.termin p{
+		margin: 1px 0 1px 0;
+		white-space: nowrap;
+		}
+.mArt	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		}
+.mArtHotS	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: red;
+		letter-spacing: 0.3em;
+		}
+.mArtBsc	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: blue;
+		letter-spacing: 0.3em;
+		}
+.mArtKsT	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: green;
+		letter-spacing: 0.3em;
+		}
+.mArtPms	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: white;
+		letter-spacing: 0.3em;
+		}
+.mArtBlm	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: crimson;
+		letter-spacing: 0.3em;
+		}
+.mArtTks	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: darkmagenta;
+		letter-spacing: 0.3em;
+		}
+.mArtGcg	{
+		font-size: 11px;
+		font-weight: 600;
+		font-style: italic;
+		color: hotpink;
+		letter-spacing: 0.3em;
+		}
+.mName	{
+		font-size: 11px;
+		}
+.mInfo	{
+		font-size: 11px;
+		}
+.mBes	{
+		font-size: 11px;
+		font-style: italic;
+		}
+#storno_st {
+		display: none;
+		width: 0px;
+		}
+#Xstorno{
+		width: 170px;
+		}
+.storno {
+		text-decoration: line-through red;
+		}
+.ein_minus	{
+		color: blue;
+		}
+.aus_null	{
+		color: orange;
+		}
+.gutscheintausch	{
+		color: green;
+		}
+.einnahme	{
+		background-color: rgba(117,162,34,0.6);
+}
+.bar	{
+		background-image: url('../images/Bargeld_1.jpg');
+		background-repeat:	no-repeat;
+		min-width: 45px;
+		height: 45px;
+		background-position: right;
+		}
+.bar_1	{
+		background-image: url('../images/Bargeld_2.jpg');
+		background-repeat:	no-repeat;
+		min-width: 35px;
+		height: 35px;
+		}
+.gutschein_back	{
+		background-image: url('../images/Gutschein_1.png');
+		background-repeat:	no-repeat;
+		min-width: 45px;
+		height: 45px;
+		background-position: right;
+		}
+.gutschein_back_1	{
+		background-image: url('../images/Gutschein_2.png');
+		background-repeat:	no-repeat;
+		width: 35px;
+		height: 35px;
+		}	
+.verk_guts	{
+		background-image: url('../images/verk_guts.jpg');
+		background-repeat:	no-repeat;
+		width: 35px;
+		height: 35px;
+		}	
+.ec	{
+		background-image: url('../images/ec_cash_klein_1.png');
+		background-repeat:	no-repeat;
+		min-width: 45px;
+		height: 45px;
+		background-position: right;
+		}
+.ec_1	{
+		background-image: url('../images/ec_cash_klein_2.png');
+		background-repeat:	no-repeat;
+		width: 35px;
+		height: 35px;
+		}
+.bar_uew	{
+		margin-left: 20px;
+		text-align: center;
+		}
+.uew_2	{
+		display: flex;
+		
+		}
+.uew_2>input{
+		width: 15px;
+		margin: 0 8px 8px 15px;
+		}
+.plus	{
+		background-color: green;
+		font-size: 10pt;
+		font-weight: 800;
+		color:	white;
+		}
+.minus	{
+		background-color: red;
+		font-size: 10pt;
+		font-weight: 800;
+		color:	white;
+		}
+.eingeloest	{
+		background-color: red;
+		font-size: 12pt;
+		font-weight: 800;
+		color:	white;
+		}
+
+
+		

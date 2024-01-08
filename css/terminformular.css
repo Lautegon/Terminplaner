@@ -1,0 +1,122 @@
+h2.terminform	{
+	margin-top: 10px;
+	margin-bottom: 8px;
+	font-size: 20px;
+	font-weight: 400;
+}
+label.terminform_l {
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+button, input.termform	{
+		margin: 8px 90px 0px 10px;
+		}
+label {
+	display: block;
+}
+input {
+	margin-right: 20px;
+	width: 190px;
+}
+textarea {
+	rows: 4;
+	cols: 5;
+	wrap: soft;
+}
+.inputgroup_terminform {
+	display: flex;
+	width: 100%;
+	}
+.vorname.nachname.mail.tel {
+	width: 49%;
+}
+.mass1.mass2.preis.massage.dauer.info {
+	width: 30%;
+}
+.terminok {
+	display: none;
+	position: absolute;
+	left: 60px;
+	top: 160px;
+	width: 80%;
+	height: 40%;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	color: green;
+	padding: 80 0 30 0;
+}
+.gutschein	{
+	margin-top: 8px;
+	padding: 8px;
+	background-color: rgb(195,255,91);
+	border-radius: 5px;
+	border-color: rgb(57,181,74);
+		background-image: url('../images/Gutschein_1.png');
+		background-repeat:	no-repeat;
+		background-position: right;
+	
+}
+.gutschein_bar	{
+	margin-top: 8px;
+	padding: 8px;
+	background-color: rgb(195,255,91);
+	border-radius: 5px;
+	border-color: rgb(57,181,74);
+		background-image: url('../images/Gutschein_bar.jpg');
+		background-repeat:	no-repeat;
+		background-position: right;
+	
+}
+.gutschein_label {
+	margin-left: 8px;
+}
+table.formular {
+	border: 0px;
+}
+th.formular {
+	border: 0px;
+	line-height: 10px;
+	font-size: 14px;
+	padding-bottom: 9px;
+}
+td.formular {
+	border: 0px;
+	background-color: white;
+	padding: 1px 6px 0px 6px;
+	line-height: 24px;
+	font-size: 15px;
+	font-weight: 600;
+}
+.formular td>input {
+	border: 0px;
+	background-color: white;
+	padding: 0px 1px 0px 0px;
+	width: 130px;
+	text-align: center;
+}
+.mailgo	{
+	margin: 0 10px 3px 2px;
+}
+.mailgo>input	{
+	width: 100px;
+	text-align: center;
+	margin-top: 11px;
+}
+.mailgo>label{
+	font-weight: 700;
+	text-align: center;
+}
+.preis>input{
+	width: 80px;
+	margin-right: 5px;
+}
+.gs_preis>input{
+	width: 80px;
+	margin-right: 5px;
+}
+.gs_preis	{
+	display: flex;
+}
+.dauer>select{
+	width: 30%;
+}
